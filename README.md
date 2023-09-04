@@ -2,7 +2,7 @@
 * Multiple Event Handlers
 * Process events without branching
 # Usage Example
-* Every new event must be registered: callbacks:registerevent(<key>)
+* Every new event must be registered: callbacks:registerevent(< key >)
 * Such functions can be invoked as usual, via love.event.push using the table index as an argument.
 ``` lua
 local callbacks = require("callbacks"); callbacks:init()
