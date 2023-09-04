@@ -1,5 +1,6 @@
 return {
     __VERSION = "11.4",
+    __URL = "https://github.com/SleepyHardbass/Love2D-Callbacks",
     __LICENSE = "MIT License",
     __WARNMSG = "Callbacks version is (%s)\nIt may not be compatible with the running version (%s)\n\n",
     __EMPTY = function() end,
