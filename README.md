@@ -6,8 +6,13 @@
 local callbacks = require("callbacks"); callbacks:init()
 love.handlers = callbacks.handlers
 
+-- callbacks.handlers.mousemoved is <function> callbacks.__EMPTY
+
 callbacks:appendhandler("mousemoved", function(x,y) print(x,y) end) -- return's function ~0x1
+-- callbacks.handlers.mousemoved is <function> ~0x1
+
 callbacks:appendhandler("mousemoved", function(x,y) print(x*y) end) -- return's function ~0x2
+-- callbacks.handlers.mousemoved is <metatable>__ITERATOR {[0] = 2, ~0x1, ~0x2 }
 
 function love.load()
     -- ...
