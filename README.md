@@ -59,9 +59,12 @@ function love.run()
         for name, a,b,c,d,e,f in love.event.poll_i do
             handlers[name](a,b,c,d,e,f)
         end
-        
+
+        -- Update
         delta = love.timer.step()
-        
+        -- ...
+
+        -- Render
         love.graphics.clear()
         love.graphics.print(love.timer.getFPS(), 10, 10)
         love.graphics.present()
