@@ -6,6 +6,8 @@
 * Such functions can be invoked as usual, via love.event.push using the table index as an argument.
 ``` lua
 local callbacks = require("callbacks"); callbacks:init()
+love.handlers = callbacks.handlers
+
 local gametime = require("gametime")
 for index = 1, #gametime.__NEWEVENTS do
     callbacks:registerevent(gametime.__NEWEVENTS[index])
