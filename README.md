@@ -1,3 +1,3 @@
 # Features
-Multiple Event Handlers;
-Process events without branching
+* Multiple Event Handlers
+* Process events without branching
