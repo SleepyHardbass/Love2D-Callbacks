@@ -90,7 +90,7 @@ love.handlers = callbacks.handlers
 
 print(collectgarbage("count")) -- ~600 kb
 
-for index = 1, 10^6 do
+for index = 1, 10^6 do -- 1'000'000
     callbacks:appendhandler("mousemoved", function(x,y) return x+y end)
 end
 print(collectgarbage("count")) -- ~47601 kb
