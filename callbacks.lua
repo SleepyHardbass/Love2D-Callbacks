@@ -125,7 +125,7 @@ return {
         local array
         for index = #self.__GARBAGE, 1, -1 do
             array = self.__GARBAGE[index]
-            for i = #array, 1, -1 do
+            for i = #array, 0, -1 do
                 array[i] = nil
             end
             self.__GARBAGE[index] = nil
