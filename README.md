@@ -16,7 +16,7 @@ for index = 1, #gametime.__NEWEVENTS do
 end
 
 ```
-
+* 1:
 ``` lua
 local callbacks = require("callbacks"); callbacks:init()
 love.handlers = callbacks.handlers
@@ -41,7 +41,7 @@ function love.draw()
     -- ...
 end
 ```
-
+* 2:
 ``` lua
 function love.run()    
     local callbacks = require("callbacks"); callbacks:init()
