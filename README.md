@@ -19,6 +19,9 @@ end
 
 callbacks:appendhandler("minutepassed", function(minute) print(minute) end)
 
+local function hourpassed(hour) print(hour) end
+callbacks:appendhandler("hourpassed", hourpassed)
+
 function love.update(delta)
     gametime:update(delta)
 end
