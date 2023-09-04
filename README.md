@@ -17,6 +17,11 @@ for index = 1, #gametime.__NEWEVENTS do
     -- ect.
 end
 
+callbacks:appendhandler("minutepassed", function(minute) print(minute) end)
+
+function love.update(delta)
+    gametime:update(delta)
+end
 ```
 * Example1:
 ``` lua
