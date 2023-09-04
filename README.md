@@ -83,3 +83,20 @@ function love.run()
     end
 end
 ```
+* Garbage collection:
+``` lua
+local callbacks = require("callbacks"); callbacks:init()
+love.handlers = callbacks.handlers
+
+print(collectgarbage("count")) -- ~600 kb
+
+for index = 1, 10^6 do
+    callbacks:appendhandler("mousemoved", function(x,y) return x+y end)
+end
+print(collectgarbage("count")) -- ~47601 kb
+
+callbacks:reinit()
+callbacks:collectgarbage()collectgarbage()
+
+print(collectgarbage("count")) -- ~350 kb
+```
