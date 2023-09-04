@@ -43,7 +43,7 @@ function love.run()
         delta = love.timer.step()
         
         love.graphics.clear()
-        love.graphics.print(timer.getFPS(), 10, 10)
+        love.graphics.print(love.timer.getFPS(), 10, 10)
         love.graphics.present()
         
         love.timer.sleep(0.001)
