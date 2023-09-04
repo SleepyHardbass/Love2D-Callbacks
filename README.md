@@ -31,7 +31,7 @@ function love.run()
     local quit = function(arg) quitarg = arg or 0 end
     callbacks:appendhandler("quit", quit)
     
-    local delta = timer.step()
+    local delta = love.timer.step()
     return function()
         -- Process events.
         love.event.pump()
