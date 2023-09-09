@@ -1,7 +1,6 @@
 [LÖVE](http://love2d.org) 11.4 Callbacks
 # Features
 * Multiple Event Handlers
-* Process events without branching
 # Usage Example
 * New event must be registered: callbacks:registerevent(< key >)
 * Such functions can be invoked as usual, via love.event.push using the table index as an argument.
