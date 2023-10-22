@@ -85,7 +85,7 @@ return {
         if self.handlers[event] == self.__EMPTY then
             self.handlers[event] = handler
         elseif type(self.handlers[event]) == "table" then
-            local index = self.handlers[event][0] + 1
+            local index = bit.bor(self.handlers[event][0] + 1)
             self.handlers[event][0] = index
             self.handlers[event][index] = handler
         elseif #self.__GARBAGE > 0 then
@@ -102,7 +102,7 @@ return {
     removehandler = function(self, event, handler)
         if type(self.handlers[event]) == "table" then
             local array = self.handlers[event]
-            local position = array[0] + 1
+            local position = bit.bor(array[0] + 1)
             for index = 1, array[0] do
                 if array[index] == handler then
                     position = index; break
@@ -110,7 +110,7 @@ return {
             end
             if position <= array[0] then
                 array[position] = array[ array[0] ]
-                array[0] = array[0] - 1
+                array[0] = bit.bor(array[0] - 1)
                 if array[0] == 1 then
                     self.handlers[event] = array[1]
                     self.__GARBAGE[#self.__GARBAGE + 1] = array
